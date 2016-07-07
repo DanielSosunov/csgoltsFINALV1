@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class dust2 extends Activity implements View.OnClickListener{
+public class mirage extends Activity implements View.OnClickListener{
     Button one,two,three,four;
     Button easy,hard;
     ImageView current;
@@ -69,13 +69,13 @@ public class dust2 extends Activity implements View.OnClickListener{
         switch(view.getId()){
             case R.id.first:
                 if(mode.equals("easy"))
-                    if(level == 3 || level == 4 || level == 7){
+                    if(level == 1 || level == 4 || level == 6||level == 10){
                         toast.show();
                         level ++;
                         change();
                     }
                 if(mode.equals("hard"))
-                    if(level == 3 || level == 4) {
+                    if(level == 1 || level == 4) {
                         toast.show();
                         level++;
                         change();
@@ -83,13 +83,13 @@ public class dust2 extends Activity implements View.OnClickListener{
                 break;
             case R.id.second:
                 if(mode.equals("easy"))
-                    if(level == 1 || level == 8){
+                    if(level == 2 || level == 9 ||level == 7){
                         toast.show();
                         level ++;
                         change();
                     }
                 if(mode.equals("hard"))
-                    if(level == 1 || level == 5) {
+                    if(level == 2 ) {
                         toast.show();
                         level++;
                         change();
@@ -97,7 +97,7 @@ public class dust2 extends Activity implements View.OnClickListener{
                 break;
             case R.id.third:
                 if(mode.equals("easy"))
-                    if(level == 2 ||level == 5 ||level ==9){
+                    if(level == 5){
                         toast.show();
                         level ++;
                         change();
@@ -111,13 +111,13 @@ public class dust2 extends Activity implements View.OnClickListener{
                 break;
             case R.id.fourth:
                 if(mode.equals("easy"))
-                    if(level == 6){
+                    if(level == 3||level==8){
                         toast.show();
                         level ++;
                         change();
                     }
                 if(mode.equals("hard"))
-                    if(level == 2) {
+                    if(level == 3||level==5) {
                         toast.show();
                         level++;
                         change();
@@ -126,7 +126,7 @@ public class dust2 extends Activity implements View.OnClickListener{
 
 
             case R.id.easy:
-                backplat(); //i have to start it
+                apartments(); //i have to start it
                 easy.setVisibility(View.GONE);
                 hard.setVisibility(View.GONE);
                 question.setVisibility(View.VISIBLE);
@@ -137,7 +137,7 @@ public class dust2 extends Activity implements View.OnClickListener{
                 mode = "easy";
                 break;
             case R.id.hard:
-                bigbox(); //i have to start it
+                ebox(); //i have to start it
                 easy.setVisibility(View.GONE);
                 hard.setVisibility(View.GONE);
                 question.setVisibility(View.VISIBLE);
@@ -152,95 +152,101 @@ public class dust2 extends Activity implements View.OnClickListener{
 
     public void change(){
         if(mode.equals("easy")){
-            if(level == 1)backplat(); //2
-            if(level == 2)fastcat();//3
-            if(level == 3)bluebin();//1
-            if(level == 4)cat();//1
-            if(level == 5)doublestack();//3
-            if(level == 6)elevator();//4
-            if(level == 7)goose();//1
-            if(level == 8)pit();//2
-            if(level == 9)xbox();//3
-            if(level == 10){
-                Intent intent = new Intent(dust2.this,mainpage.class);
+            if(level == 1)apartments(); //1
+            if(level == 2)van();//2
+            if(level == 3)sandwich();//4
+            if(level == 4)palace();//1
+            if(level == 5)jungle();//3
+            if(level == 6)tetris();//1
+            if(level == 7)kitchen();//2
+            if(level == 8)firebox();//4
+            if(level == 9)chair();//2
+            if(level == 10)bench();//1
+            if(level == 11){
+                Intent intent = new Intent(mirage.this,mainpage.class);
                 startActivity(intent);
             }
 
         }
 
         if(mode.equals("hard")){
-            if(level == 1)bigbox();//2
-            if(level == 2)green();//4
-            if(level == 3)ninja();//1
-            if(level == 4)palmtree();//1
-            if(level == 5)scaffolding();//2
-            if(level == 6)suicide();//3
+            if(level == 1)ebox();//1
+            if(level == 2)ninja();//2
+            if(level == 3)ticketbooth();//4
+            if(level == 4)minibench();//1
+            if(level == 5)minichair();//4
+            if(level == 6)dark();//3
             if(level == 7){
-                Intent intent = new Intent(dust2.this,mainpage.class);
+                Intent intent = new Intent(mirage.this,mainpage.class);
                 startActivity(intent);
             }
         }
     }
 
-    public void backplat(){
-        current.setImageResource(R.drawable.dust2_backplat);
-        setTexts("back b","back plat","back box","corner stacks"); // 2
+    public void apartments(){
+        current.setImageResource(R.drawable.mirage_apartments);
+        setTexts("apartments", "halls", "house", "b long"); // 1
     }
-    public void bluebin(){
-        current.setImageResource(R.drawable.dust2_bluebin);
-        setTexts("blue bin","garbage","short a","long a"); // 1
+    public void bench(){
+        current.setImageResource(R.drawable.mirage_bench);
+        setTexts("bench","back b","hard","cat watch"); // 1
     }
-    public void bigbox(){
-        current.setImageResource(R.drawable.dust2_bigboxb);
-        setTexts("quad","big box","stacks","plat");// 2
+    public void chair(){
+        current.setImageResource(R.drawable.mirage_chair);
+        setTexts("right mid","chair","cat peek", "top ramp"); // 2
     }
-    public void cat(){
-        current.setImageResource(R.drawable.dust2_cat);
-        setTexts("cat","right side mid","fast","a surprise"); // 1
+    public void dark(){
+        current.setImageResource(R.drawable.mirage_dark);
+        setTexts("sneaky", "hidden", "dark", "mid ramp"); // 3
     }
-    public void goose(){
-        current.setImageResource(R.drawable.dust2_goosea);
-        setTexts("goose","dark","back a","end wall"); // 1
+    public void ebox(){
+        current.setImageResource(R.drawable.mirage_ebox);
+        setTexts("ebox","unknown","right side b","market box"); // 1
     }
-    public void doublestack(){
-        current.setImageResource(R.drawable.dust2_doublestack);
-        setTexts("common boxes", "bomb box", "double stack","window stacks"); // 3
+    public void firebox(){
+        current.setImageResource(R.drawable.mirage_firebox); // 4
+        setTexts("triple","hidden","ninja","fire box");
     }
-    public void elevator(){
-        current.setImageResource(R.drawable.dust2_elevator);
-        setTexts("clean","hidden","scout spot","elevator"); // 4
+    public void jungle(){
+        current.setImageResource(R.drawable.mirage_jungle);
+        setTexts("window house","green","jungle","dark"); // 3
     }
-    public void fastcat(){
-        current.setImageResource(R.drawable.dust2_fastcat);
-        setTexts("ct ramp","ct boost","fast cat","ct boxes"); //3
+    public void kitchen(){
+        current.setImageResource(R.drawable.mirage_kitchen); // 2
+        setTexts("woods","kitchen","clean","dirt");
     }
-    public void green(){
-        current.setImageResource(R.drawable.dust2_green);
-        setTexts("red","blue","left side mid","green"); // 4
+    public void minibench(){
+        current.setImageResource(R.drawable.mirage_minibench);
+        setTexts("minibench", "bench", "dark", "corner b"); // 1
     }
+    public void minichair(){
+        current.setImageResource(R.drawable.mirage_minichair);
+        setTexts("chair", "outside aps", "entrance aps", "minichair"); // 4
+    }
+    public void palace(){
+        current.setImageResource(R.drawable.mirage_palace);
+        setTexts("palace","a long","a fast","dark house"); // 1
+    }
+    public void sandwich(){
+        current.setImageResource(R.drawable.mirage_sandwich);
+        setTexts("dark","under stairs","trap","sandwich"); // 4
+    }
+    public void tetris(){
+        current.setImageResource(R.drawable.mirage_tetris);
+        setTexts("tetris","a house","top stacks","left slant"); // 1
+    }
+    public void ticketbooth(){
+        current.setImageResource(R.drawable.mirage_ticketbooth);
+        setTexts("top ct","a fly","over","ticketbooth"); // 4
+    }
+    public void van(){
+        current.setImageResource(R.drawable.mirage_van);
+        setTexts("white","van","barrel","long peek"); // 2
+    }
+
     public void ninja(){
-        current.setImageResource(R.drawable.dust2_ninja);
-        setTexts("ninja", "hidden", "knife","quite"); // 1
-    }
-    public void palmtree(){
-        current.setImageResource(R.drawable.dust2_palmtree);
-        setTexts("palm tree","headshot barrels","mid pole","snipers nest"); // 1
-    }
-    public void pit(){
-        current.setImageResource(R.drawable.dust2_pit);
-        setTexts("dark", "pit", "a drop", "sneaky"); // 2
-    }
-    public void scaffolding(){
-        current.setImageResource(R.drawable.dust2_scaffolding);
-        setTexts("woods","scaffolding","Right window","jump spot"); // 2
-    }
-    public void suicide(){
-        current.setImageResource(R.drawable.dust2_suicide);
-        setTexts("drop t","surprise","suicide","front mid"); // 3
-    }
-    public void xbox(){
-        current.setImageResource(R.drawable.dust2_xboxmid);
-        setTexts("cat boost","mid box","xbox", "snipers box"); // 3
+        current.setImageResource(R.drawable.mirage_ninjamirage);
+        setTexts("back fire","ninja","dumb","winner"); // 2
     }
 
 
