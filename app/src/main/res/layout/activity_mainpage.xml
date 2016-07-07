@@ -29,7 +29,8 @@
         android:scaleType="fitXY"
         android:background="#fcae51"
         android:layout_alignTop="@+id/inferno"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_dust2" />
 
     <ImageButton
         android:layout_width="100dp"

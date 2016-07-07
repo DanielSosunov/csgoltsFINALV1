@@ -10,13 +10,15 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class mainpage extends Activity implements View.OnClickListener{
-    ImageButton inferno;
+    ImageButton inferno,dust2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainpage);
 
         inferno = (ImageButton)findViewById(R.id.inferno);
+        dust2 =(ImageButton)findViewById(R.id.dust2);
+        dust2.setOnClickListener(this);
         inferno.setOnClickListener(this);
     }
 
@@ -25,8 +27,12 @@ public class mainpage extends Activity implements View.OnClickListener{
         switch(v.getId()){
 
             case R.id.inferno:
-                Intent intent = new Intent(mainpage.this,inferno.class);
-                startActivity(intent);
+                Intent inferno = new Intent(mainpage.this,inferno.class);
+                startActivity(inferno);
+                break;
+            case R.id.dust2:
+                Intent dust2 = new Intent(mainpage.this,dust2.class);
+                startActivity(dust2);
                 break;
         }
     }
