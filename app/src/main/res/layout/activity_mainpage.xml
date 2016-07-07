@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -10,6 +11,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#fcae51"
     tools:context="csgolts.gamerful.csgolts.mainpage">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
 
 
     <ImageButton
@@ -49,9 +60,90 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/cache"
+        android:scaleType="fitXY"
         android:layout_below="@+id/dust2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="37dp"
-        android:background="#fcae51" />
+        android:background="#fcae51"
+        android:src="@drawable/main_cache" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/train"
+        android:scaleType="fitXY"
+        android:layout_alignTop="@+id/cache"
+        android:layout_alignLeft="@+id/mirage"
+        android:layout_alignStart="@+id/mirage"
+        android:background="#fcae51"
+        android:adjustViewBounds="false"
+        android:src="@drawable/main_train" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/overpass"
+        android:scaleType="fitXY"
+        android:layout_alignTop="@+id/train"
+        android:layout_alignLeft="@+id/inferno"
+        android:layout_alignStart="@+id/inferno"
+        android:background="#fcae51"
+        android:src="@drawable/main_overpass" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/nuke"
+        android:scaleType="fitXY"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/cache"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#fcae51"
+        android:src="@drawable/main_nuke" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/cobblestone"
+        android:layout_alignTop="@+id/nuke"
+        android:scaleType="fitXY"
+        android:layout_alignLeft="@+id/overpass"
+        android:layout_alignStart="@+id/overpass"
+        android:background="#fcae51"
+        android:src="@drawable/main_cobblestone" />
+
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/main_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Beta"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/inferno"
+        android:layout_alignEnd="@+id/inferno" />
+
+    <ImageButton
+        android:layout_width="95dp"
+        android:layout_height="35dp"
+        android:id="@+id/subscribe"
+        android:src="@drawable/main_subscribe"
+        android:scaleType="fitXY"
+        android:background="#fcae51"
+        android:layout_below="@+id/cobblestone"
+        android:layout_alignRight="@+id/train"
+        android:layout_alignEnd="@+id/train"
+        android:elevation="20dp"
+        android:baselineAlignBottom="true" />
+
 </RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "196005112723",
+    "firebase_url": "https://csgolts.firebaseio.com",
+    "project_id": "csgolts",
+    "storage_bucket": "csgolts.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196005112723:android:f2aabfbecf10ba61",
+        "android_client_info": {
+          "package_name": "csgolts.gamerful.csgolts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196005112723-sk5aiapq3869of5dnhgrnllk6t2fk30v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARFAbWUOWz4smYy-feAyBfRUlmjaMMXDU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

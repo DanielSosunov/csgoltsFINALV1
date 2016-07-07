@@ -2,6 +2,7 @@ package csgolts.gamerful.csgolts;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -19,11 +20,13 @@ public class dust2 extends Activity implements View.OnClickListener{
     String mode = "none";
     Toast toast;
     int level = 1;
+    MediaPlayer correct,wrong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quizlayout);
-
+        correct = MediaPlayer.create(this,R.raw.correct);
+        wrong = MediaPlayer.create(this,R.raw.wrong);
         initialCode();
 
     }
@@ -73,13 +76,17 @@ public class dust2 extends Activity implements View.OnClickListener{
                         toast.show();
                         level ++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 if(mode.equals("hard"))
                     if(level == 3 || level == 4) {
                         toast.show();
                         level++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 break;
             case R.id.second:
                 if(mode.equals("easy"))
@@ -87,13 +94,17 @@ public class dust2 extends Activity implements View.OnClickListener{
                         toast.show();
                         level ++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 if(mode.equals("hard"))
                     if(level == 1 || level == 5) {
                         toast.show();
                         level++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 break;
             case R.id.third:
                 if(mode.equals("easy"))
@@ -101,13 +112,17 @@ public class dust2 extends Activity implements View.OnClickListener{
                         toast.show();
                         level ++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 if(mode.equals("hard"))
                     if(level == 6) {
                         toast.show();
                         level++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 break;
             case R.id.fourth:
                 if(mode.equals("easy"))
@@ -115,13 +130,17 @@ public class dust2 extends Activity implements View.OnClickListener{
                         toast.show();
                         level ++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 if(mode.equals("hard"))
                     if(level == 2) {
                         toast.show();
                         level++;
                         change();
+                        correct.start();
                     }
+                    else wrong.start();
                 break;
 
 
